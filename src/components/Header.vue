@@ -18,12 +18,23 @@
         <div class="header_sp_nextbuttonlinks2 icon- inactive">&laquo;</div>
 
         <ul class="slider1">
-          <li class="header_sp_spielbutton2 slide active">
-            <p class="header_sp_spielbutton_nav2"><span>Live</span></p>
-          </li>
-          <li class="header_sp_spielbutton2 slide">
-            <p class="header_sp_spielbutton_nav2"><span>Programm</span></p>
-          </li>
+          <router-link
+                  tag="li"
+                  :to="{name: 'Live'}"
+                  class="header_sp_spielbutton2 slide active">
+            <p class="header_sp_spielbutton_nav2">
+              <span>Live</span>
+            </p>
+          </router-link>
+
+          <router-link
+                  tag="li"
+                  :to="{path: '/schedule'}"
+                  class="header_sp_spielbutton2 slide">
+            <p class="header_sp_spielbutton_nav2">
+              <span>Programm</span>
+            </p>
+          </router-link>
         </ul>
         <div class="header_sp_nextbuttonrechts2 icon- inactive">&raquo;</div>
       </div>
