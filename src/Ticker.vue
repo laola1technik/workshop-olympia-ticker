@@ -4,7 +4,7 @@
     <div class="main_container">
       <div class="main">
         <div class="stage">
-          <router-view></router-view>
+          <router-view/>
           <footer-template/>
         </div> <!-- STAGE  ENDE -->
       </div> <!-- MAIN  ENDE -->

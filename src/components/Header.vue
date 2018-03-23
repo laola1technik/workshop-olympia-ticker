@@ -21,7 +21,7 @@
           <router-link
                   tag="li"
                   :to="{name: 'Live'}"
-                  class="header_sp_spielbutton2 slide active">
+                  class="header_sp_spielbutton2 slide">
             <p class="header_sp_spielbutton_nav2">
               <span>Live</span>
             </p>
