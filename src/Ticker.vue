@@ -4,7 +4,7 @@
     <div class="header_logocontainer config_json_aktualisieren">
       <div class="header_logo">
         <p class="header_logo_bewerb">Live-Ticker Olympische Spiele</p>
-        <a target="_blank" href="http://liveticker.laola1.at"><img class="header_logo_img" src="assets/img/laola1_liveticker_small.png"></a>
+        <a target="_blank" href="http://liveticker.laola1.at"><img class="header_logo_img" src="./assets/laola1_liveticker_small.png"></a>
         <div class="header_logo_aktualisieren" >aktualisieren
           <div class="progressbar">
             <div></div>
@@ -107,12 +107,12 @@
         </div>
 
         <div class="paging-container" id="liveticker-tickertext-paging">
-          <a href="javascript:void(0)" class="boxarrow right">mehr anzeigen <span><img src="assets/img/arrow-right.png" alt="next" /></span></a>
+          <a href="javascript:void(0)" class="boxarrow right">mehr anzeigen <span><img src="./assets/arrow-right.png" alt="next" /></span></a>
         </div>
         <!-- LIVE ENDE -->
         <!-- FOOTER START -->
         <div class="footer">
-          <span>produced by</span><a href="http://www.laola1.at" target="_blank"><img src="assets/img/l1logosmall.png"></a>
+          <span>produced by</span><a href="http://www.laola1.at" target="_blank"><img src="./assets/l1logosmall.png"></a>
         </div>
         <!-- FOOTER ENDE-->
       </div> <!-- STAGE  ENDE -->
