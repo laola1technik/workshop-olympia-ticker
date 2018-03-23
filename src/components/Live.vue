@@ -15,45 +15,7 @@
         </section>
       </div>
       <div class="content_container">
-        <div class="text-box-highlights">
-          <div class="left">
-            <div class="sportart">
-            </div>
-            <div class="zeit">
-              <span>20:46 Uhr</span>
-            </div>
-          </div>
-          <div class="right">
-            <div class="text">
-              <p class="title">Das waren die Olympischen Spiele in Rio</p>
-              <span>
-                                    Das US-Basketball-Team setzt den Schlusspunkt bei den Spielen 2016! Spannende 16 Wettkampf-Tage liegen hinter uns - 306 Mal ging es um Gold, Silber und Bronze. Aber auch abseits der Medaillen gab es schöne Momente im Zeichen der fünf Ringe. Wir hoffen, ihr hatte Spaß mit unserem Live-Ticker.
-                                </span>
-            </div>
-          </div>
-          <div class=""></div>
-        </div>
-
-        <div class="text-box-highlights">
-          <div class="left">
-            <div class="sportart">
-              <span class="sprite-actions-small basketball"></span>
-            </div>
-            <div class="zeit">
-              <span>20:43 Uhr</span>
-            </div>
-          </div>
-          <div class="right">
-            <div class="text">
-              <p class="title">Basketball - Finale Herren</p>
-              <span>
-                                    Die letzte Entscheidung bei diesen Spielen fällt im Basketball. Im Finale der Herren stehen sich die USA und Serbien gegenüber.
-                                </span>
-            </div>
-          </div>
-          <div class="medaille gold"></div>
-        </div>
-
+        <message/>
         <div class="text-box-highlights placeholder">
           <div class="left">
             <div class="sportart"></div>
@@ -80,9 +42,11 @@
 <script>
     import Loader from '@/js/Loader';
     import Parser from '@/js/Parser';
+    import Message from '@/components/Message';
 
     export default {
         name: "live",
+        components: { Message },
         data() {
             return {
                 intervalId: undefined,
