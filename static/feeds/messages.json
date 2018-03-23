@@ -5,16 +5,6 @@
         "tickertxt": {
             "message": [
                 {
-                    "time": "22:45 Uhr",
-                    "id": "17240",
-                    "messageType": "",
-                    "isHighlight": "true",
-                    "sportart": "",
-                    "sportartId": "",
-                    "title": "Das waren die Olympischen Spiele in Rio",
-                    "text": "und nun wirklick der letzt eintrag!"
-                },
-                {
                     "time": "22:42 Uhr",
                     "id": "17239",
                     "messageType": "",
