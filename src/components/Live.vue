@@ -78,7 +78,66 @@
 </template>
 
 <script>
+    import Loader from '@/js/Loader';
+    import Parser from '@/js/Parser';
+
     export default {
-        name: "live"
+        name: "live",
+        data() {
+            return {
+                intervalId: undefined,
+                loader: undefined,
+                parser: undefined,
+                messages: [],
+                selectedSportsType: undefined,
+                url: '/feeds/messages.json'
+            }
+        },
+        beforeCreate() {
+            this.loader = new Loader();
+            this.parser = new Parser();
+        },
+        created() {
+            this.refreshTicker();
+            this.intervalId = setInterval(this.refreshTicker, 10 * 1000);
+        },
+        destroyed() {
+            clearInterval(this.intervalId);
+        },
+        methods: {
+            refreshTicker() {
+                this.loader.load(this.url)
+                    .then(json => {
+                        this.messages = parser.parse(json);
+                    });
+            }
+        },
+        computed: {
+            sportsTypes() {
+                if(!this.messages.length) {
+                    return [];
+                }
+
+                let map = new Map();
+                this.messages.map(message => {
+                    if(message.sportsTypeId && !map.has(message.sportsTypeId)) {
+                        map.set(parseInt(message.sportsTypeId), message.sportsType);
+                    }
+
+                });
+
+                return Array.from(map);
+            },
+            filteredMessages() {
+                if(typeof this.selectedSportsType !== 'undefined') {
+                    return this.messages;
+                }
+
+                return this.messages
+                    .filter(message => {
+                        return message.sportsTypeId == this.selectedSportsType;
+                    })
+            }
+        }
     }
 </script>
