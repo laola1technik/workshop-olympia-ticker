@@ -127,6 +127,6 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="less" scoped>
+  @import './styles/olympiaTicker.less';
 </style>
