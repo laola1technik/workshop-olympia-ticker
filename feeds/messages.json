@@ -5,16 +5,6 @@
         "tickertxt": {
             "message": [
                 {
-                    "time": "22:50 Uhr",
-                    "id": "17241",
-                    "messageType": "",
-                    "isHighlight": "true",
-                    "sportart": "",
-                    "sportartId": "",
-                    "title": "Gute Nacht",
-                    "text": "und guten Morgen"
-                },
-                {
                     "time": "22:45 Uhr",
                     "id": "17240",
                     "messageType": "",
