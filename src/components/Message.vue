@@ -36,7 +36,7 @@
                 return this.message.sportsType !== '';
             },
             sportsTypeClass() {
-                return this.message.sportsType.toLowerCase();
+                return this.message.sportsType.toLowerCase().replace('ß', 'ss');
             },
             typeClass() {
                 const typeToClass = {
