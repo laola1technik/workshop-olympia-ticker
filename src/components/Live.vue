@@ -15,7 +15,9 @@
         </section>
       </div>
       <div class="content_container">
-        <message/>
+        <message v-for="message in filteredMessages"
+                 :message="message"
+                 :key="message.id"/>
         <div class="text-box-highlights placeholder">
           <div class="left">
             <div class="sportart"></div>
@@ -54,14 +56,12 @@
                 parser: undefined,
                 messages: [],
                 selectedSportsType: undefined,
-                url: '/feeds/messages.json'
+                url: '/static/feeds/messages.json'
             }
         },
-        beforeCreate() {
+        created() {
             this.loader = new Loader();
             this.parser = new Parser();
-        },
-        created() {
             this.refreshTicker();
             this.intervalId = setInterval(this.refreshTicker, 10 * 1000);
         },
@@ -72,7 +72,7 @@
             refreshTicker() {
                 this.loader.load(this.url)
                     .then(json => {
-                        this.messages = parser.parse(json);
+                        this.messages = this.parser.parse(json);
                     });
             }
         },
@@ -93,7 +93,7 @@
                 return Array.from(map);
             },
             filteredMessages() {
-                if(typeof this.selectedSportsType !== 'undefined') {
+                if(typeof this.selectedSportsType === 'undefined') {
                     return this.messages;
                 }
 
