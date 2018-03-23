@@ -80,11 +80,7 @@
           <a href="javascript:void(0)" class="boxarrow right">mehr anzeigen <span><img src="./assets/arrow-right.png" alt="next" /></span></a>
         </div>
         <!-- LIVE ENDE -->
-        <!-- FOOTER START -->
-        <div class="footer">
-          <span>produced by</span><a href="http://www.laola1.at" target="_blank"><img src="./assets/l1logosmall.png"></a>
-        </div>
-        <!-- FOOTER ENDE-->
+        <footer-template/>
       </div> <!-- STAGE  ENDE -->
     </div> <!-- MAIN  ENDE -->
   </div> <!-- MAIN_CONTAINER ENDE -->
@@ -93,10 +89,11 @@
 
 <script>
     import HeaderTemplate from './components/Header.vue';
+    import FooterTemplate from './components/Footer.vue';
 
     export default {
         name: "ticker",
-        components: { HeaderTemplate }
+        components: { HeaderTemplate, FooterTemplate }
     }
 </script>
 
